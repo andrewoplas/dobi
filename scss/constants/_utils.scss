@@ -1,0 +1,31 @@
+@import './variables';
+
+.link {
+  color: $color-link;
+  text-decoration: underline;
+}
+
+.section-bg-primary {
+  background-color: $color-primary;
+}
+
+.section-bg-gray {
+  background-color: $color-gray-light;
+}
+
+.section-bg-violet {
+  background-color: #5600F8;
+}
+
+.rotate {
+  -moz-transition: all 250ms linear;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.rotate.rotate-90 {
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
