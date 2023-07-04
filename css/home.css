@@ -79,6 +79,7 @@
   max-width: 1110px;
 }
 .nav-section .brand-logo {
+  width: 115px;
   z-index: 101;
 }
 @media (max-width: 1199.98px) {
@@ -169,7 +170,51 @@
   background-color: #2d2a4c;
   border-color: #2d2a4c;
 }
-.nav-section .menu-xs-icon {
+.nav-section .button {
+  padding: 1rem 2.4375rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  transition: 150ms;
+  text-decoration: none;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  transition: 300ms;
+  background-color: #000d1e;
+  color: white;
+  border-color: #000d1e;
+  padding: 0.625rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+@media (max-width: 767.98px) {
+  .nav-section .button {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+.nav-section .button:hover {
+  background-color: black;
+  border-color: black;
+}
+@media (max-width: 1199.98px) {
+  .nav-section .button {
+    padding: 0.5rem 1rem;
+  }
+}
+.nav-section .button:hover {
+  background-color: #2d2a4c;
+  border-color: #2d2a4c;
+}
+.nav-section .mobile-menu-open {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5em;
+}
+.nav-section .mobile-menu-open .menu-xs-icon {
   font-size: 25px;
   cursor: pointer;
 }
@@ -200,45 +245,6 @@
 }
 .nav-section .menu-xs .menu-cta-wrapper .menu-close {
   font-size: 30px;
-}
-.nav-section .menu-xs .menu-cta-wrapper .button {
-  padding: 1rem 2.4375rem;
-  font-family: "Lato", sans-serif;
-  font-size: 1.375rem;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 6px;
-  transition: 150ms;
-  text-decoration: none;
-  display: inline-block;
-  border-width: 2px;
-  border-style: solid;
-  transition: 300ms;
-  background-color: #000d1e;
-  color: white;
-  border-color: #000d1e;
-  padding: 0.625rem 1.5rem;
-  font-size: 1.125rem;
-  font-weight: normal;
-}
-@media (max-width: 767.98px) {
-  .nav-section .menu-xs .menu-cta-wrapper .button {
-    font-size: 1rem;
-    padding: 0.9rem 2rem;
-  }
-}
-.nav-section .menu-xs .menu-cta-wrapper .button:hover {
-  background-color: black;
-  border-color: black;
-}
-@media (max-width: 1199.98px) {
-  .nav-section .menu-xs .menu-cta-wrapper .button {
-    padding: 0.5rem 1rem;
-  }
-}
-.nav-section .menu-xs .menu-cta-wrapper .button:hover {
-  background-color: #2d2a4c;
-  border-color: #2d2a4c;
 }
 .nav-section .menu-xs .menu-container {
   width: 100vw;
@@ -1138,12 +1144,12 @@ footer {
   text-align: center;
   background-color: #0e0935;
 }
-footer .logo {
-  width: 65px;
+footer .brand-logo {
+  width: 115px;
 }
-@media (max-width: 767.98px) {
-  footer .logo {
-    width: 55px;
+@media (max-width: 1199.98px) {
+  footer .brand-logo {
+    width: 90px;
   }
 }
 footer .links-wrapper {
@@ -1157,7 +1163,7 @@ footer .links-wrapper {
 @media (max-width: 575.98px) {
   footer .links-wrapper {
     flex-direction: column;
-    margin-top: 1.75em;
+    margin-top: 3em;
   }
 }
 footer .links-wrapper a {
