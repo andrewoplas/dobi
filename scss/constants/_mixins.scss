@@ -62,7 +62,7 @@
 	display: inline-block;
 	border-width: 2px;
 	border-style: solid;
-	transition: 150ms;
+	transition: 300ms;
 
 	@include media-breakpoint-down(sm) {
 		font-size: 1rem;
@@ -77,11 +77,11 @@
 	@include _button;
 	background-color: $background-color;
 	color: white;
-
 	border-color: $border-color;
 
 	&:hover {
 		background-color: darken($background-color, 15%);
+		border-color: darken($border-color, 15%);
 	}
 }
 

@@ -1,0 +1,187 @@
+@import '../constants/variables';
+@import '../constants/mixins';
+@import '../constants/utils';
+@import '../../packages/bootstrap/scss/functions';
+@import '../../packages/bootstrap/scss/variables';
+@import '../../packages/bootstrap/scss/mixins/breakpoints';
+
+// Navigation Section
+$nav-height: 108px;
+$nav-height-xs: 83px;
+.nav-section {
+	z-index: 100;
+	width: 100vw;
+	position: fixed;
+	padding: 20px 30px;
+	transition: 250ms;
+
+	@include media-breakpoint-down(sm) {
+		padding: 16px 5px;
+	}
+
+	&.active {
+		transition: 250ms;
+		background-color: white;
+		box-shadow: 0 10px 30px 0 rgba(25, 45, 100, 0.08);
+	}
+
+	.container {
+		max-width: 1110px;
+	}
+
+	.brand-logo {
+		z-index: 101;
+
+		@include media-breakpoint-down(lg) {
+			width: 90px;
+		}
+	}
+
+	.links {
+		a {
+			display: inline-block;
+			margin-right: 40px;
+			color: black;
+			font-family: $font-lt;
+			font-size: 1.25rem;
+			line-height: 26px;
+			text-decoration: none;
+			position: relative;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1rem;
+				margin-right: 1rem;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				bottom: -10px;
+				left: 0;
+				background-color: $color-link-underline;
+				visibility: hidden;
+				transform: scaleX(0);
+				transition: 300ms;
+				border-radius: 2px;
+			}
+
+			&:hover:before {
+				visibility: visible;
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+
+			&.active {
+				&:before {
+					visibility: visible;
+					transform: scaleX(1);
+				}
+			}
+
+			.icon-logo {
+				width: 28px;
+				height: 28px;
+				margin-right: 10px;
+				margin-top: -4px;
+			}
+		}
+
+		button {
+			@include button($background-color: #000d1e, $border-color: #000d1e);
+			padding: 0.625rem 1.5rem;
+			font-size: 1.125rem;
+			font-weight: normal;
+
+			@include media-breakpoint-down(lg) {
+				padding: 0.5rem 1rem;
+			}
+
+			&:hover {
+				background-color: #2d2a4c;
+				border-color: #2d2a4c;
+			}
+		}
+	}
+
+	.menu-xs-icon {
+		font-size: 25px;
+		cursor: pointer;
+	}
+
+	.menu-xs {
+		background-color: white;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		padding-top: $nav-height-xs;
+		transform: translateX(100%);
+		transition-duration: 300ms;
+		transition-timing-function: ease-in-out;
+
+		&.active {
+			transition-duration: 300ms;
+			transition-timing-function: ease-in-out;
+			transform: translateX(0);
+		}
+
+		.menu-cta-wrapper {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			display: flex;
+			align-items: center;
+			column-gap: 1.5em;
+
+			.menu-close {
+				font-size: 30px;
+			}
+
+			.button {
+				@include button($background-color: #000d1e, $border-color: #000d1e);
+				padding: 0.625rem 1.5rem;
+				font-size: 1.125rem;
+				font-weight: normal;
+
+				@include media-breakpoint-down(lg) {
+					padding: 0.5rem 1rem;
+				}
+
+				&:hover {
+					background-color: #2d2a4c;
+					border-color: #2d2a4c;
+				}
+			}
+		}
+
+		.menu-container {
+			$padding: 1.5rem;
+			width: 100vw;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+
+			a {
+				padding: 2rem $padding;
+				margin: 0;
+				font-family: $font-lt;
+				font-weight: 600;
+				font-size: 1.5rem;
+				border-top: 1px solid #e9e9e9;
+				color: #0e0935;
+
+				&::before {
+					content: none !important;
+				}
+
+				&:last-child {
+					border-bottom: 1px solid #e9e9e9;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

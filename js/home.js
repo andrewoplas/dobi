@@ -1,17 +1,17 @@
 $(function() {
-  // // Typewriter
-  // new Typewriter('#typewriter', {
-  //   strings: [
-  //     'skjorter',
-  //     'jakkesæt',
-  //     'vintertøj',
-  //     'rensetøj',
-  //     'vasketøj',
-  //     'sengetøj',
-  //   ],
-  //   autoStart: true,
-  //   loop: true,
-  // });
+  // Typewriter
+  new Typewriter('#typewriter', {
+    strings: [
+      'word 1',
+      'word 2',
+      'word 3',
+      'word 4',
+      'word 5',
+      'word 6',
+    ],
+    autoStart: true,
+    loop: true,
+  });
 
   // Initialize Flickity
   if (xs) {

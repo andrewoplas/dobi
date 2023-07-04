@@ -1,6 +1,8 @@
 @import './constants/variables';
 @import './constants/mixins';
 @import './constants/utils';
+@import './templates/header';
+@import './templates/footer';
 @import '../packages/bootstrap/scss/functions';
 @import '../packages/bootstrap/scss/variables';
 @import '../packages/bootstrap/scss/mixins/breakpoints';
@@ -26,182 +28,6 @@ section {
 
 .container {
 	max-width: 1300px;
-}
-
-// Navigation Section
-$nav-height: 108px;
-$nav-height-xs: 70px;
-.nav-section {
-	z-index: 100;
-	width: 100vw;
-	position: fixed;
-	padding: 20px 30px;
-	transition: 250ms;
-
-	@include media-breakpoint-down(sm) {
-		padding: 16px 5px;
-	}
-
-	&.active {
-		transition: 250ms;
-		background-color: white;
-		box-shadow: 0 10px 30px 0 rgba(25, 45, 100, 0.08);
-	}
-
-	.container {
-		max-width: 1110px;
-	}
-
-	.brand-logo {
-		z-index: 101;
-
-		@include media-breakpoint-down(lg) {
-			width: 90px;
-		}
-	}
-
-	.links {
-		a {
-			display: inline-block;
-			margin-right: 40px;
-			color: black;
-			font-family: $font-lt;
-			font-size: 1.25rem;
-			line-height: 26px;
-			text-decoration: none;
-			position: relative;
-
-			@include media-breakpoint-down(lg) {
-				font-size: 1rem;
-				margin-right: 1rem;
-			}
-
-			&:before {
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 3px;
-				bottom: -10px;
-				left: 0;
-				background-color: $color-link-underline;
-				visibility: hidden;
-				transform: scaleX(0);
-				transition: 300ms;
-				border-radius: 2px;
-			}
-
-			&:hover:before {
-				visibility: visible;
-				-webkit-transform: scaleX(1);
-				transform: scaleX(1);
-			}
-
-			&.active {
-				&:before {
-					visibility: visible;
-					transform: scaleX(1);
-				}
-			}
-
-			.icon-logo {
-				width: 28px;
-				height: 28px;
-				margin-right: 10px;
-				margin-top: -4px;
-			}
-		}
-
-		button {
-			@include button($background-color: #000d1e, $border-color: #000d1e);
-			padding: 0.625rem 1.5rem;
-			font-size: 1.125rem;
-			font-weight: normal;
-			background-color: #000d1e;
-
-			@include media-breakpoint-down(lg) {
-				padding: 0.5rem 1rem;
-			}
-		}
-	}
-
-	.menu-xs-icon {
-		font-size: 25px;
-		cursor: pointer;
-	}
-
-	.menu-xs {
-		background-color: $color-primary;
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		right: 0;
-		padding-top: 110px;
-		transform: translateX(100%);
-		transition-duration: 300ms;
-		transition-timing-function: ease-in-out;
-
-		&.active {
-			transition-duration: 300ms;
-			transition-timing-function: ease-in-out;
-			transform: translateX(0);
-		}
-
-		a,
-		button {
-			font-family: $font-lt;
-			font-weight: 600;
-			margin: 0;
-			font-size: 25px;
-			margin-bottom: 30px;
-		}
-
-		a::before {
-			content: none;
-		}
-
-		.menu-close {
-			font-size: 30px;
-			position: absolute;
-			top: 20px;
-			right: 20px;
-		}
-
-		.menu-container {
-			width: 100vw;
-			height: 400px;
-			padding: 0 25px;
-			display: flex;
-			flex-direction: column;
-
-			.store-container {
-				@include flex(center, center);
-				flex-wrap: wrap;
-				margin-top: 30px;
-
-				.store-container-label {
-					margin-bottom: 0;
-					display: block;
-					font-family: $font-lt;
-					font-size: 15px;
-					color: black;
-					flex-basis: 100%;
-				}
-
-				svg {
-					width: 100%;
-					height: 100%;
-					display: block;
-					flex: 1;
-
-					image {
-						width: 100%;
-						height: 100%;
-					}
-				}
-			}
-		}
-	}
 }
 
 // [Section 1] Main Section
@@ -901,6 +727,11 @@ section.cta {
 
 		@include media-breakpoint-down(sm) {
 			margin-top: 2rem;
+		}
+
+		&:hover {
+			background-color: #2d2a4c;
+			border-color: #2d2a4c;
 		}
 	}
 

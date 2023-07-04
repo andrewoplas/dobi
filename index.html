@@ -151,12 +151,18 @@
 				<!-- [sm-down] Mobile menu -->
 				<i class="fas fa-bars menu-xs-icon d-block d-md-none menu-toggle"></i>
 				<div class="menu-xs d-md-none">
-					<i class="fas fa-times menu-close menu-toggle"></i>
+					<div class="menu-cta-wrapper">
+						<i class="fas fa-times menu-close menu-toggle"></i>
+						<a href="#" class="button">Bestil</a>
+					</div>
 					<div class="menu-container links">
-						<a href="hvorfor-jetclean.html">Hvorfor Dobi</a>
-						<a href="prices.html">Priser</a>
-						<a href="javascript:void(0)">Log ind</a>
-						<button>Bestil afhentning</button>
+						<a href="#">Hvorfor Dobi</a>
+						<a href="#">Priser</a>
+						<a href="#">Erhverv</a>
+						<a href="#">
+							<img data-src="./assets/images/icon-login.svg" class="icon-logo" />
+							Log ind
+						</a>
 					</div>
 				</div>
 			</div>
@@ -167,8 +173,10 @@
 			<div class="main-section">
 				<h1 class="title">Københavns bedste renseri?</h1>
 				<p class="description">
-					Sig farvel til snavsede jakkesæt. Sig hej til Dobi.<br />Vi klarer alt
-					indenfor rens og vask - dør til dør levering hele ugen
+					Sig farvel til snavsede
+					<span class="font-weight-bold" id="typewriter">jakkesæt</span>. Sig hej til
+					Dobi.<br />Vi klarer alt indenfor rens og vask - dør til dør levering hele
+					ugen
 				</p>
 				<svg
 					class="arrow d-none d-md-block"
@@ -392,7 +400,9 @@
 					komme igen
 				</p>
 
-				<div class="row mt-4 mt-lg-5 gy-4 g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+				<div
+					class="row mt-4 mt-lg-5 gy-4 g-3 row-cols-1 row-cols-sm-2 row-cols-lg-4"
+				>
 					<div class="col">
 						<div class="item">
 							<div class="stars-wrapper">
@@ -626,6 +636,9 @@
 
 		<!-- Bootstrap breakpoint -->
 		<script src="https://cdn.rawgit.com/JacobLett/IfBreakpoint/e9fcd4fd/if-b4-breakpoint.min.js"></script>
+
+		<!-- Typewriter -->
+		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 		<!-- Carousel - Flickity -->
 		<script src="packages/flickity/flickity.min.js"></script>
