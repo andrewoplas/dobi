@@ -29,9 +29,14 @@
 	font-size: 3.875rem;
 	line-height: 1.1em;
 
+	@include media-breakpoint-down(lg) {
+		font-size: 3.15rem;
+	}
+
 	@include media-breakpoint-down(md) {
 		font-size: 2.625rem;
 	}
+	
 }
 
 @mixin small-title {
@@ -48,6 +53,10 @@
 	@include description;
 	font-size: 1.8125rem;
 	line-height: 1.5em;
+
+	@include media-breakpoint-down(lg) {
+		font-size: 1.64rem;
+	}
 
 	@include media-breakpoint-down(md) {
 		font-size: 1.5rem;
@@ -94,7 +103,7 @@
 	}
 }
 
-@mixin button-outline($color: #0e0935) {
+@mixin button-outline($color: $color-secondary-blue-dark) {
 	@include _button;
 	background-color: white;
 	color: $color;
@@ -106,7 +115,7 @@
 	}
 }
 
-@mixin button-link($color: #0e0935) {
+@mixin button-link($color: $color-secondary-blue-dark) {
 	font-family: $font-lt;
 	font-size: 1.375rem;
 	font-weight: bold;

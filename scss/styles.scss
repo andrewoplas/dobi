@@ -1,0 +1,41 @@
+@use './templates' as *;
+@use './bootstrap' as *;
+@use './constants' as *;
+@use './pages' as *;
+
+body {
+	font-size: 1rem;
+	font-family: $font-lt;
+
+	.container {
+		--bs-gutter-x: 3rem;
+		max-width: 1110px;
+	}
+
+	section {
+		.title {
+			@include small-title;
+			@include remove-spacing;
+			@include media-breakpoint-down(lg) {
+				font-size: 1.75rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				font-size: 1.5rem;
+			}
+		}
+		.description {
+			@include small-description;
+			@include remove-spacing;
+			@include align-center;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 1.325rem;
+			}
+
+			@include media-breakpoint-down(md) {
+				font-size: 1.125rem;
+			}
+		}
+	}
+}

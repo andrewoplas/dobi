@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Dobi</title>
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Review",
+				"itemReviewed": {
+					"@type": "Organization",
+					"name": "jetclean.dk"
+				},
+				"reviewRating": {
+					"@type": "aggregateRating",
+					"ratingValue": 4.8,
+					"bestRating": 5,
+					"reviewCount": "1108"
+				},
+				"author": "Users"
+			}
+		</script>
+
+		<meta name="title" content="" />
+		<meta name="description" content="" />
+
+		<!-- Favicons -->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="./assets/favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="./assets/favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="./assets/favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="./assets/favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="./assets/favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="./assets/favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="./assets/favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="./assets/favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="./assets/favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="./assets/favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./assets/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta
+			name="msapplication-TileImage"
+			content="./assets/favicon//ms-icon-144x144.png"
+		/>
+		<meta name="theme-color" content="#ffffff" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,600,700,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- Carousel - Flickity -->
+		<link rel="stylesheet" href="packages/flickity/flickity.min.css" />
+
+		<!-- Main CSS -->
+		<link href="css/styles.css" rel="stylesheet" />
+	</head>
+	<body class="page-erhverv">
+		<!-- Navigation Section -->
+		<div class="nav-section" id="sticky-navbar">
+			<div class="container d-flex justify-content-between align-items-center">
+				<a href="index.html">
+					<img
+						data-src="./assets/images/logo-dark.svg"
+						class="brand-logo"
+						alt="Dobi logo"
+					/>
+				</a>
+				<div class="links d-none d-md-block">
+					<a href="hvorfor-dobi.html">Hvorfor Dobi</a>
+					<a href="priser.html">Priser</a>
+					<a href="erhverv.html">Erhverv</a>
+					<a href="#">
+						<img data-src="./assets/images/icon-login.svg" class="icon-logo" />
+						Login
+					</a>
+					<button>Bestil afhentning</button>
+				</div>
+
+				<!-- [sm-down] Mobile menu -->
+				<div class="mobile-menu-open d-flex d-md-none">
+					<i class="fa-solid fa-bars menu-xs-icon menu-toggle"></i>
+					<a href="#" class="button">Bestil</a>
+				</div>
+				<div class="menu-xs d-md-none">
+					<div class="menu-cta-wrapper">
+						<i class="fa-solid fa-times menu-close menu-toggle"></i>
+						<a href="#" class="button">Bestil</a>
+					</div>
+					<div class="menu-container links">
+						<a href="hvorfor-dobi.html">Hvorfor Dobi <i class="fa-solid fa-arrow-right"></i></a>
+						<a href="priser.html">Priser <i class="fa-solid fa-arrow-right"></i></a>
+						<a href="erhverv.html">Erhverv <i class="fa-solid fa-arrow-right"></i></a>
+						<a href="#">
+							<img data-src="./assets/images/icon-login.svg" class="icon-logo" />
+							Log ind
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Section -->
+		<div class="section-bg-yellow">
+			<div class="container">
+				<div class="main-section">
+					<div class="content-wrapper">
+						<h1 class="title">Dobi er (ogsa) for virksomheder</h1>
+						<p class="description">
+							Virenser alle typer af tekstiler for virksomheder - lige fra Gucci
+							uniformer til IKEA maskotter
+						</p>
+						<a class="button" href="#">Bliv ringet op</a>
+					</div>
+
+					<img data-src="./assets/images/erhverv-hero.png" />
+				</div>
+			</div>
+		</div>
+
+		<!-- Services -->
+		<section class="services container">
+			<div class="content-wrapper">
+				<div class="row g-3 g-md-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+					<div class="col">
+						<div class="item item--first-child">
+							<h3 class="title mb-3">Renseriservice for virksomhder</h3>
+							<p class="mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+
+							<div class="tags-container">
+								<a href="#">Boutique hotel</a>
+								<a href="#">Skadeservice</a>
+								<a href="#">Kontor</a>
+								<a href="#">Forsikringsselskab</a>
+								<a href="#">Tandlage</a>
+								<a href="#">Skenhedsk</a>
+								<a href="#">Hotelleilighed</a>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="item">
+							<img data-src="" class="mb-4" />
+							<p class="subtitle mb-2">FIRMAORDNING</p>
+							<p class="description mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+							<a class="button" href="#">
+								Bestil afhentning
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="item">
+							<img data-src="" class="mb-4" />
+							<p class="subtitle mb-2">FIRMAORDNING</p>
+							<p class="description mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+							<a class="button" href="#">
+								Bestil afhentning
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="item">
+							<img data-src="" class="mb-4" />
+							<p class="subtitle mb-2">FIRMAORDNING</p>
+							<p class="description mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+							<a class="button" href="#">
+								Bestil afhentning
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="item">
+							<img data-src="" class="mb-4" />
+							<p class="subtitle mb-2">FIRMAORDNING</p>
+							<p class="description mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+							<a class="button" href="#">
+								Bestil afhentning
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="item">
+							<img data-src="" class="mb-4" />
+							<p class="subtitle mb-2">FIRMAORDNING</p>
+							<p class="description mb-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+								dolorum ipsum magnam nam obcaecati.
+							</p>
+							<a class="button" href="#">
+								Bestil afhentning
+								<i class="fa-solid fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				Vi tilbyder en bred vitte at vask og rense delser, der passer til
+				forskellige behov og budgetter for virksomheder og offentlige institutioner.
+				Vi har mange ärs erfaring og hoje standarder for kvalitet og hygiene,
+				hvilket betyder, at dine stande altid bliver behandlet pa den bedst mulige
+				mäde.
+			</p>
+
+			<p>
+				Vi renser alle typer tekstiler, inklusive arbejdstej, uniformer og de, der
+				kraever en skänsom behandling, sasom teater- og tv-kostumer eller tekstiler
+				fra museer.
+			</p>
+
+			<p>
+				Ejere af restauranter, udlejningsfirmaer, sommerhuse, klinikker eller
+				institutioner kan ogsa nyde godt af vores rensning af forskellige typer
+				forklader, klude, kugledyner og linned.
+			</p>
+
+			<p>
+				Desuden renser vi ogsa tekstiler i forbindelse med fugt- eller brandskade.
+			</p>
+		</section>
+
+		<!-- Contact -->
+		<div class="section-bg-blue-dark">
+			<div class="container">
+				<section class="contact">
+					<h3 class="title text-center">Skal vi ogsa hjaelpe dig?</h3>
+
+					<div class="content-wrapper">
+						<div class="content-text-wrapper">
+							<p class="mb-3 mb-md-4">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, saepe
+								beatae quas itaque obcaecati rem nemo enim modi eaque nobis tempora vel
+								voluptatibus porro? Molestias harum sequi dolore provident aut?
+							</p>
+							<p class="mb-3 mb-md-4">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, saepe
+								beatae quas itaque obcaecati rem nemo enim modi eaque nobis tempora vel
+								voluptatibus porro? Molestias harum sequi dolore provident aut?
+							</p>
+							<p class="mb-3 mb-md-4">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, saepe
+								beatae quas itaque obcaecati rem nemo enim modi eaque nobis tempora vel
+								voluptatibus porro? Molestias harum sequi dolore provident aut?
+							</p>
+						</div>
+						<div class="content-form-wrapper">
+							<p class="title">Hor mere og fa et godt tilbud</p>
+							<p class="description">
+								Udfyld formularen, og vi kontakter dig hurtigst muligt.
+							</p>
+
+							<form>
+								<div class="mb-3 mb-md-4">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Organisation"
+										required
+									/>
+								</div>
+								<div class="mb-3 mb-md-4">
+									<input type="text" class="form-control" placeholder="Navn" required />
+								</div>
+								<div class="mb-3 mb-md-4">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Telefonnumber"
+										required
+									/>
+								</div>
+								<div class="mb-3 mb-md-4">
+									<input
+										type="email"
+										class="form-control"
+										placeholder="Email"
+										required
+									/>
+								</div>
+								<button type="submit" class="button">Kontakt mig</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- Breadcrumb -->
+		<section class="section-bg-purple">
+			<nav aria-label="breadcrumb" class="container">
+				<ol class="breadcrumb mb-0">
+					<li class="breadcrumb-item">
+						<a href="index.html"><i class="fa-solid fa-house"></i></a>
+					</li>
+					<li class="breadcrumb-item"><a href="priser.html">Priser</a></li>
+					<li class="breadcrumb-item active" aria-current="page">
+						Sjkorte (vasket & stroget)
+					</li>
+				</ol>
+			</nav>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<img
+				data-src="./assets/images/logo-light.svg"
+				class="brand-logo"
+				alt="Dobi logo"
+			/>
+			<div class="links-wrapper">
+				<a href="#">CVR. 36683317</a>
+				<span class="divider">-</span>
+				<a href="#">Services</a>
+				<span class="divider">-</span>
+				<a href="#">Byer</a>
+				<span class="divider">-</span>
+				<a href="#">GDPR</a>
+				<span class="divider">-</span>
+				<a href="#">Handelsbetingelser</a>
+				<span class="divider">-</span>
+				<a href="#">Kontakt os</a>
+			</div>
+		</footer>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+		<!-- Bootstrap -->
+		<script src="packages/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Bootstrap breakpoint -->
+		<script src="https://cdn.rawgit.com/JacobLett/IfBreakpoint/e9fcd4fd/if-b4-breakpoint.min.js"></script>
+
+		<!-- Lazy load -->
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
+		<!-- Fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/497b7038e7.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Custom JS -->
+		<script src="js/common.js"></script>
+	</body>
+</html>

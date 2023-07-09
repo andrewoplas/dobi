@@ -35,7 +35,7 @@ section.cta {
 	}
 
 	a {
-		@include button($background-color: #0e0935, $border-color: #0e0935);
+		@include button($background-color: $color-secondary-blue-dark, $border-color: $color-secondary-blue-dark);
 		margin-top: 2.5rem;
 
 		@include media-breakpoint-down(md) {

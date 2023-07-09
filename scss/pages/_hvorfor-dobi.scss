@@ -1,0 +1,214 @@
+@use '../templates' as *;
+@use '../bootstrap' as *;
+@use '../constants' as *;
+
+body.page-hvorfor-dobi {
+	// [Section 1] Main Section
+	.main-section {
+		padding: calc(86px + #{$nav-height}) 1.5rem 10.3125em;
+
+		@include media-breakpoint-down(md) {
+			padding-top: calc(46px + #{$nav-height-xs});
+			padding-bottom: 6em;
+		}
+
+		.title {
+			@include main-title;
+			@include remove-spacing;
+			@include media-breakpoint-down(md) {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+
+		.description {
+			@include main-description;
+			@include remove-spacing;
+			@include align-center;
+			margin-top: 21px;
+			max-width: 600px;
+		}
+
+		a {
+			@include button;
+			margin-top: 5rem;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: fit-content;
+
+			@include media-breakpoint-down(md) {
+				margin-top: 48px;
+			}
+		}
+	}
+
+	// [Section 2] Why Jetclean
+	.why-jetclean {
+		padding: 200px 30px;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+
+		.item {
+			@include flex(center, center);
+			width: 100%;
+			max-width: 935px;
+			margin: 0 auto;
+
+			&:not(:last-child) {
+				margin-bottom: 350px;
+			}
+
+			@include media-breakpoint-down(lg) {
+				&:not(:last-child) {
+					margin-bottom: 280px;
+				}
+			}
+
+			@include media-breakpoint-down(md) {
+				&:not(:last-child) {
+					margin-bottom: 150px;
+				}
+			}
+
+			@include media-breakpoint-down(md) {
+				justify-content: start;
+				flex-wrap: wrap;
+
+				img {
+					width: 80%;
+					margin-bottom: 2rem;
+					align-self: flex-start;
+				}
+
+				.description-container {
+					order: 1;
+				}
+			}
+
+			.description {
+				margin-top: 1em;
+			}
+
+			a.button {
+				@include button-link;
+				margin-top: 2em;
+				display: flex;
+				align-items: center;
+				line-height: 100%;
+				column-gap: 0.75em;
+
+				&:hover {
+					column-gap: 1em;
+				}
+
+				i {
+					font-size: 0.9em;
+				}
+			}
+
+			.spacing-right {
+				margin-right: 75px;
+
+				@include media-breakpoint-down(lg) {
+					margin-right: 35px;
+				}
+
+				@include media-breakpoint-down(md) {
+					margin-right: 0;
+				}
+			}
+
+			picture {
+				@include media-breakpoint-down(md) {
+					margin-right: auto;
+					margin-left: auto;
+					text-align: center;
+				}
+			}
+		}
+
+		.content {
+			margin-top: 25px;
+
+			ul {
+				@include remove-spacing;
+				list-style-type: none;
+			}
+
+			li {
+				@include flex(initial, center);
+				margin-bottom: 1em;
+				font-family: $font-lt;
+				font-size: 1.25rem;
+
+				@include media-breakpoint-down(md) {
+					font-size: 1rem;
+				}
+
+				i {
+					@include flex(center, center);
+					width: 1.5em;
+					height: 1.5em;
+					margin-right: 1.25em;
+					border-radius: 50%;
+					color: $color-check;
+					background-color: $color-check-background;
+					border: 1px solid $color-check-border;
+				}
+			}
+		}
+	}
+
+	// [Section 3] C02
+	.CO2 {
+		padding: 8em 1.5em;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 3.5em;
+		align-items: center;
+
+		@include media-breakpoint-down(lg) {
+			padding-top: 7em;
+			padding-bottom: 7em;
+			gap: 3em;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+			grid-template-columns: 1fr;
+			gap: 2em;
+		}
+
+		img {
+			width: 200px;
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include media-breakpoint-down(lg) {
+				width: 175px;
+			}
+
+			@include media-breakpoint-down(md) {
+				width: 150px;
+			}
+		}
+
+		.title {
+			@include media-breakpoint-down(md) {
+				text-align: center;
+			}
+		}
+
+		.description {
+			@include media-breakpoint-down(md) {
+				text-align: center;
+			}
+		}
+	}
+}
