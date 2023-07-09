@@ -6,26 +6,27 @@ $color-primary-40: rgba(216, 250, 240, 0.4);
 $color-secondary: #5f36ff;
 
 // Others
-$color-gray-light: #f9fafa;
+$color-gray-light: #f4f4f4;
 $color-text-title: #020e1d;
 $color-text-description: #020e1d;
 $color-check: #3fe5b3;
 $color-check-background: rgba(216, 250, 240, 0.4);
 $color-check-border: rgba(216, 250, 240, 0.6);
-$color-star: #FFCD17;
+$color-star: #ffcd17;
 $color-link: #2727d9;
 $color-link-underline: #3fe5b3;
 
-$color-bg-gray: #f9fafa;
+$color-bg-gray: $color-gray-light;
 $color-bg-green: #eefff7;
 $color-bg-yellow: rgba(250, 245, 216, 0.5);
 $color-bg-blue: #eef7fd;
 $color-bg-red: #fcf4fe;
+$color-bg-purple: #464264;
 
 // Glider
 $glide-dots-inactive: #dfdcef;
 $glide-dots-active: #0e0935;
 
 // Fonts
-$font-mw: "Merriweather", serif;
-$font-lt: "Lato", sans-serif;
+$font-mw: 'Merriweather', serif;
+$font-lt: 'Lato', sans-serif;

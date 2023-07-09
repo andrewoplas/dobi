@@ -1,17 +1,12 @@
-@import './constants/variables';
-@import './constants/mixins';
-@import './constants/utils';
-@import './templates/header';
-@import './templates/footer';
-@import '../packages/bootstrap/scss/functions';
-@import '../packages/bootstrap/scss/variables';
-@import '../packages/bootstrap/scss/mixins/breakpoints';
+@use './templates' as *;
+@use './bootstrap' as *;
+@use './constants' as *;
 
 section {
 	.title {
 		@include small-title;
 		@include remove-spacing;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			font-size: 1.5rem;
 		}
 	}
@@ -19,7 +14,7 @@ section {
 		@include small-description;
 		@include remove-spacing;
 		@include align-center;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			font-size: 1.125rem;
 			font-weight: 400;
 		}
@@ -34,7 +29,7 @@ section {
 .main-section {
 	padding: calc(86px + #{$nav-height}) 1.5rem 10.3125em;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding-top: calc(46px + #{$nav-height-xs});
 		padding-bottom: 6em;
 	}
@@ -42,13 +37,9 @@ section {
 	.title {
 		@include main-title;
 		@include remove-spacing;
-
-		font-weight: 900;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			padding-left: 25px;
 			padding-right: 25px;
-			font-size: 42px;
-			line-height: 45px;
 		}
 	}
 
@@ -58,11 +49,6 @@ section {
 		@include align-center;
 		margin-top: 21px;
 		max-width: 805px;
-
-		@include media-breakpoint-down(sm) {
-			font-size: 1.5rem;
-			line-height: 1.5em;
-		}
 	}
 
 	a {
@@ -73,7 +59,7 @@ section {
 		display: block;
 		width: fit-content;
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 48px;
 		}
 	}
@@ -103,7 +89,7 @@ section {
 			list-style: none;
 			column-gap: 2.5em;
 
-			@include media-breakpoint-down(xs) {
+			@include media-breakpoint-down(sm) {
 				flex-direction: column;
 				align-items: flex-start;
 				row-gap: 0.75em;
@@ -118,7 +104,7 @@ section {
 				align-items: center;
 				column-gap: 0.5em;
 
-				@include media-breakpoint-down(xs) {
+				@include media-breakpoint-down(sm) {
 					font-size: 1.15rem;
 					text-align: left;
 					flex: 1;
@@ -136,16 +122,16 @@ section {
 section.why-jc {
 	padding: 10.56rem 1.5rem 9.3125rem;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding-top: 72px;
 		padding-bottom: 100px;
 	}
 
 	.description {
-		max-width: 680px;
+		max-width: 800px;
 		margin-top: 0.5em;
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 23px;
 		}
 	}
@@ -154,7 +140,7 @@ section.why-jc {
 		@include flex(center, center);
 		margin-top: 40px;
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 35px;
 		}
 
@@ -173,7 +159,7 @@ section.why-jc {
 			font-family: $font-lt;
 			font-size: 20px;
 
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				font-size: 1rem;
 			}
 
@@ -196,11 +182,11 @@ section.carousel {
 	padding: 7rem 0;
 	overflow-x: hidden;
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		padding: 6rem 0;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding: 5rem 1.5rem;
 	}
 
@@ -209,14 +195,14 @@ section.carousel {
 		padding-left: 22%;
 		padding-right: 1.5rem;
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			padding-left: 1.5rem;
 		}
 
 		.title {
 			text-align: left;
 
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				text-align: center;
 			}
 		}
@@ -227,7 +213,7 @@ section.carousel {
 			margin-left: 0;
 			text-align: left;
 
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				text-align: center;
 			}
 		}
@@ -236,15 +222,15 @@ section.carousel {
 	#carousel {
 		margin-top: 6.25em;
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			margin-top: 5em;
 		}
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 2.5em;
 		}
 
-		@include media-breakpoint-down(xs) {
+		@include media-breakpoint-down(sm) {
 			padding: 5px;
 		}
 
@@ -273,7 +259,7 @@ section.carousel {
 				);
 			}
 
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				height: 350px;
 			}
 
@@ -287,7 +273,7 @@ section.carousel {
 				width: 100%;
 				object-fit: cover;
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					object-position: top;
 				}
 			}
@@ -305,7 +291,7 @@ section.carousel {
 					font-weight: bold;
 					text-align: left;
 
-					@include media-breakpoint-down(sm) {
+					@include media-breakpoint-down(md) {
 						font-size: 1.5rem;
 					}
 				}
@@ -317,7 +303,7 @@ section.carousel {
 					color: white;
 					text-align: left;
 
-					@include media-breakpoint-down(sm) {
+					@include media-breakpoint-down(md) {
 						font-size: 1rem;
 					}
 				}
@@ -369,12 +355,12 @@ section.easy-steps {
 	@include flex(space-between, center);
 	padding: 8.75rem 1.5rem;
 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-down(xl) {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 	}
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		padding-top: 5rem;
 		padding-bottom: 5rem;
 	}
@@ -402,7 +388,7 @@ section.easy-steps {
 		margin-top: 40px;
 		padding-left: 0;
 
-		@include media-breakpoint-down(xs) {
+		@include media-breakpoint-down(sm) {
 			padding-left: 0;
 		}
 
@@ -411,7 +397,7 @@ section.easy-steps {
 			padding-bottom: 70px;
 			position: relative;
 
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				padding-bottom: 2rem;
 				align-items: initial;
 			}
@@ -434,7 +420,7 @@ section.easy-steps {
 				background: black;
 				z-index: -1;
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					margin-left: 25px;
 				}
 
@@ -460,7 +446,7 @@ section.easy-steps {
 				font-size: 26px;
 				font-weight: bold;
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					width: 50px;
 					height: 50px;
 					font-size: 1.25rem;
@@ -482,7 +468,7 @@ section.easy-steps {
 				font-size: 1.625rem;
 				font-weight: bold;
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					font-size: 1.35rem;
 				}
 			}
@@ -506,11 +492,11 @@ section.easy-steps {
 		margin-top: 7.5rem;
 		column-gap: 2rem;
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 4rem;
 		}
 
-		@include media-breakpoint-down(xs) {
+		@include media-breakpoint-down(sm) {
 			gap: 1rem;
 			flex-wrap: wrap;
 		}
@@ -548,12 +534,12 @@ section.easy-steps {
 section.reviews {
 	padding: 8em 1.5em;
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		padding-top: 7em;
 		padding-bottom: 7em;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding-top: 5em;
 		padding-bottom: 5em;
 	}
@@ -589,7 +575,7 @@ section.reviews {
 			font-size: 1.375rem;
 			flex: 1;
 
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				font-size: 1.15rem;
 			}
 		}
@@ -601,7 +587,7 @@ section.reviews {
 			color: #8e8e8e;
 			font-size: 1.125rem;
 
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(md) {
 				font-size: 1rem;
 			}
 		}
@@ -616,12 +602,12 @@ section.accordion {
 		max-width: 1100px;
 	}
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(lg) {
 		padding-top: 7em;
 		padding-bottom: 7em;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding-top: 5em;
 		padding-bottom: 5em;
 	}
@@ -634,11 +620,11 @@ section.accordion {
 	#accordion {
 		margin-top: 5em;
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			margin-top: 4em;
 		}
 
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-top: 3em;
 		}
 
@@ -652,11 +638,11 @@ section.accordion {
 				outline: 0;
 				border-radius: 10px;
 
-				@include media-breakpoint-down(md) {
+				@include media-breakpoint-down(lg) {
 					font-size: 1.25rem;
 				}
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					font-size: 1.15rem;
 				}
 
@@ -679,108 +665,9 @@ section.accordion {
 				font-size: 1.125rem;
 				text-align: left;
 
-				@include media-breakpoint-down(sm) {
+				@include media-breakpoint-down(md) {
 					font-size: 1rem;
 				}
-			}
-		}
-	}
-}
-
-// [Section 7] CTA
-section.cta {
-	padding: 8em 1.5em;
-	text-align: center;
-
-	@include media-breakpoint-down(md) {
-		padding-top: 7em;
-		padding-bottom: 7em;
-	}
-
-	@include media-breakpoint-down(sm) {
-		padding-top: 5em;
-		padding-bottom: 5em;
-	}
-
-	.title {
-		color: white;
-		font-size: 3.875rem;
-
-		@include media-breakpoint-down(md) {
-			font-size: 3.5rem;
-		}
-
-		@include media-breakpoint-down(sm) {
-			font-size: 2.75rem;
-		}
-	}
-
-	.description {
-		color: white;
-		margin-top: 1em;
-		max-width: 750px;
-	}
-
-	a {
-		@include button($background-color: #0e0935, $border-color: #0e0935);
-		margin-top: 2.5rem;
-
-		@include media-breakpoint-down(sm) {
-			margin-top: 2rem;
-		}
-
-		&:hover {
-			background-color: #2d2a4c;
-			border-color: #2d2a4c;
-		}
-	}
-
-	.icon-wrapper {
-		margin-top: 2em;
-		display: flex;
-		column-gap: 1em;
-		justify-content: center;
-	}
-}
-
-// Footer
-footer {
-	padding: 3em 1.5em;
-	text-align: center;
-	background-color: #0e0935;
-
-	.brand-logo {
-		width: 115px;
-
-		@include media-breakpoint-down(lg) {
-			width: 90px;
-		}
-	}
-
-	.links-wrapper {
-		margin-top: 1.5em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5em;
-		color: white;
-
-		@include media-breakpoint-down(xs) {
-			flex-direction: column;
-			margin-top: 3em;
-		}
-
-		a {
-			@include description;
-			text-decoration: none;
-			color: white;
-			font-size: 0.875em;
-			font-weight: 500;
-		}
-
-		.divider {
-			@include media-breakpoint-down(sm) {
-				display: none;
 			}
 		}
 	}

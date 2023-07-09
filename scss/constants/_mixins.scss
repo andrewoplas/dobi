@@ -1,4 +1,5 @@
-@import './variables';
+@use 'variables' as *;
+@use '../bootstrap/' as *;
 
 @mixin remove-spacing {
 	margin: 0;
@@ -18,7 +19,6 @@
 }
 
 @mixin title {
-	text-align: center;
 	font-family: $font-mw;
 	font-weight: bold;
 	color: $color-text-title;
@@ -27,6 +27,11 @@
 @mixin main-title {
 	@include title;
 	font-size: 3.875rem;
+	line-height: 1.1em;
+
+	@include media-breakpoint-down(md) {
+		font-size: 2.625rem;
+	}
 }
 
 @mixin small-title {
@@ -35,7 +40,6 @@
 }
 
 @mixin description {
-	text-align: center;
 	font-family: $font-lt;
 	color: $color-text-description;
 }
@@ -43,6 +47,11 @@
 @mixin main-description {
 	@include description;
 	font-size: 1.8125rem;
+	line-height: 1.5em;
+
+	@include media-breakpoint-down(md) {
+		font-size: 1.5rem;
+	}
 }
 
 @mixin small-description {
@@ -64,7 +73,7 @@
 	border-style: solid;
 	transition: 300ms;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		font-size: 1rem;
 		padding: 0.9rem 2rem;
 	}
@@ -94,5 +103,24 @@
 	&:hover {
 		color: white;
 		background-color: $color;
+	}
+}
+
+@mixin button-link($color: #0e0935) {
+	font-family: $font-lt;
+	font-size: 1.375rem;
+	font-weight: bold;
+	transition: 150ms;
+	text-decoration: none;
+	display: inline-block;
+	transition: 300ms;
+	color: $color;
+
+	@include media-breakpoint-down(md) {
+		font-size: 1rem;
+	}
+
+	&:hover {
+		color: lighten($color, 30%);
 	}
 }

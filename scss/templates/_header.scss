@@ -1,9 +1,5 @@
-@import '../constants/variables';
-@import '../constants/mixins';
-@import '../constants/utils';
-@import '../../packages/bootstrap/scss/functions';
-@import '../../packages/bootstrap/scss/variables';
-@import '../../packages/bootstrap/scss/mixins/breakpoints';
+@use '../bootstrap' as *;
+@use '../constants' as *;
 
 // Navigation Section
 $nav-height: 108px;
@@ -15,7 +11,7 @@ $nav-height-xs: 83px;
 	padding: 20px 30px;
 	transition: 250ms;
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		padding: 16px 5px;
 	}
 
@@ -33,7 +29,7 @@ $nav-height-xs: 83px;
 		width: 115px;
 		z-index: 101;
 
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			width: 90px;
 		}
 	}
@@ -49,7 +45,7 @@ $nav-height-xs: 83px;
 			text-decoration: none;
 			position: relative;
 
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				font-size: 1rem;
 				margin-right: 1rem;
 			}
@@ -95,7 +91,7 @@ $nav-height-xs: 83px;
 			font-size: 1.125rem;
 			font-weight: normal;
 
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				padding: 0.5rem 1rem;
 			}
 
@@ -112,7 +108,7 @@ $nav-height-xs: 83px;
 		font-size: 1.125rem;
 		font-weight: normal;
 
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			padding: 0.5rem 1rem;
 		}
 

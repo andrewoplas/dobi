@@ -1,0 +1,45 @@
+@use '../bootstrap' as *;
+@use '../constants' as *;
+
+// Footer
+footer {
+	padding: 3em 1.5em;
+	text-align: center;
+	background-color: #0e0935;
+
+	.brand-logo {
+		width: 115px;
+
+		@include media-breakpoint-down(xl) {
+			width: 90px;
+		}
+	}
+
+	.links-wrapper {
+		margin-top: 1.5em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+		color: white;
+
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+			margin-top: 3em;
+		}
+
+		a {
+			@include description;
+			text-decoration: none;
+			color: white;
+			font-size: 0.875em;
+			font-weight: 500;
+		}
+
+		.divider {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+	}
+}
