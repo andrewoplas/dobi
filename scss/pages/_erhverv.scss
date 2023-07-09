@@ -79,18 +79,7 @@ body.page-erhverv {
 
 	// [Section 2] Services
 	section.services {
-		padding-top: 8em;
-		padding-bottom: 8em;
-
-		@include media-breakpoint-down(lg) {
-			padding-top: 7em;
-			padding-bottom: 7em;
-		}
-
-		@include media-breakpoint-down(md) {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
+		@include section-spacing;
 
 		.content-wrapper {
 			margin-bottom: 6em;
@@ -126,7 +115,7 @@ body.page-erhverv {
 							color: $color-primary-50;
 							background-color: $color-secondary-blue-dark;
 							border-radius: 6px;
-							transition: 300ms;
+							transition: $transition;
 
 							&:hover {
 								opacity: 0.8;
@@ -179,18 +168,7 @@ body.page-erhverv {
 
 	// [Section 3] Contact
 	section.contact {
-		padding-top: 8em;
-		padding-bottom: 8em;
-
-		@include media-breakpoint-down(lg) {
-			padding-top: 7em;
-			padding-bottom: 7em;
-		}
-
-		@include media-breakpoint-down(md) {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
+		@include section-spacing;
 
 		.title {
 			color: white;

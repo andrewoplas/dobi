@@ -101,7 +101,7 @@
   background-color: #3fe5b3;
   visibility: hidden;
   transform: scaleX(0);
-  transition: 300ms;
+  transition: 200ms;
   border-radius: 2px;
 }
 .nav-section .links a:hover:before {
@@ -131,7 +131,7 @@
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #000d1e;
   color: white;
   border-color: #000d1e;
@@ -170,7 +170,7 @@
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #000d1e;
   color: white;
   border-color: #000d1e;
@@ -294,7 +294,7 @@ section.cta .title {
 section.cta .description {
   color: white;
   margin-top: 1em;
-  max-width: 750px;
+  max-width: 730px;
 }
 section.cta a {
   padding: 1rem 2.4375rem;
@@ -308,7 +308,7 @@ section.cta a {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #0e0934;
   color: white;
   border-color: #0e0934;
@@ -350,7 +350,7 @@ section.cta .icon-wrapper {
 .breadcrumb li a {
   color: white !important;
   opacity: 0.7;
-  transition: 300ms;
+  transition: 200ms;
 }
 .breadcrumb li a:hover {
   opacity: 1;
@@ -466,7 +466,7 @@ body.page-home .main-section a {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #5f36ff;
   color: white;
   border-color: #5f36ff;
@@ -947,7 +947,7 @@ body.page-home section.easy-steps .action-buttons .btn-why {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: white;
   color: #0e0934;
   border-color: #0e0934;
@@ -977,7 +977,7 @@ body.page-home section.easy-steps .action-buttons .btn-order-pickup {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #5f36ff;
   color: white;
   border-color: #5f36ff;
@@ -1007,7 +1007,8 @@ body.page-home section.easy-steps .bg-right {
   z-index: -1;
 }
 body.page-home section.reviews {
-  padding: 8em 1.5em;
+  padding-top: 8em;
+  padding-bottom: 8em;
 }
 @media (max-width: 991.98px) {
   body.page-home section.reviews {
@@ -1071,7 +1072,8 @@ body.page-home section.reviews .item .name {
   }
 }
 body.page-home section.accordion {
-  padding: 8em 1.5em;
+  padding-top: 8em;
+  padding-bottom: 8em;
 }
 @media (max-width: 991.98px) {
   body.page-home section.accordion {
@@ -1088,6 +1090,12 @@ body.page-home section.accordion {
 body.page-home section.accordion .description {
   max-width: 750px;
   margin-top: 0.5em;
+}
+body.page-home section.accordion .description a {
+  color: #020e1d;
+}
+body.page-home section.accordion .description a:hover {
+  color: #5600f8;
 }
 body.page-home section.accordion #accordion {
   margin-top: 5em;
@@ -1122,6 +1130,9 @@ body.page-home section.accordion #accordion .accordion-item .accordion-header bu
   body.page-home section.accordion #accordion .accordion-item .accordion-header button {
     font-size: 1.15rem;
   }
+}
+body.page-home section.accordion #accordion .accordion-item .accordion-header button:hover {
+  background-color: rgba(170, 250, 219, 0.5882352941);
 }
 body.page-home section.accordion #accordion .accordion-item .accordion-header button:not(.collapsed) {
   background-color: rgba(170, 250, 219, 0.5882352941);
@@ -1214,7 +1225,7 @@ body.page-hvorfor-dobi .main-section a {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #5f36ff;
   color: white;
   border-color: #5f36ff;
@@ -1293,7 +1304,7 @@ body.page-hvorfor-dobi .why-jetclean .item a.button {
   transition: 150ms;
   text-decoration: none;
   display: inline-block;
-  transition: 300ms;
+  transition: 200ms;
   color: #0e0934;
   margin-top: 2em;
   display: flex;
@@ -1508,7 +1519,7 @@ body.page-erhverv .main-section .content-wrapper a {
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #5f36ff;
   color: white;
   border-color: #5f36ff;
@@ -1595,7 +1606,7 @@ body.page-erhverv section.services .content-wrapper .item--first-child .tags-con
   color: #44D1A7;
   background-color: #0e0934;
   border-radius: 6px;
-  transition: 300ms;
+  transition: 200ms;
 }
 body.page-erhverv section.services .content-wrapper .item--first-child .tags-container a:hover {
   opacity: 0.8;
@@ -1627,7 +1638,7 @@ body.page-erhverv section.services .content-wrapper .item a.button {
   transition: 150ms;
   text-decoration: none;
   display: inline-block;
-  transition: 300ms;
+  transition: 200ms;
   color: #0e0934;
   display: flex;
   align-items: center;
@@ -1754,7 +1765,7 @@ body.page-erhverv section.contact .content-wrapper .content-form-wrapper form bu
   display: inline-block;
   border-width: 2px;
   border-style: solid;
-  transition: 300ms;
+  transition: 200ms;
   background-color: #5f36ff;
   color: white;
   border-color: #5f36ff;
@@ -1769,6 +1780,353 @@ body.page-erhverv section.contact .content-wrapper .content-form-wrapper form bu
 body.page-erhverv section.contact .content-wrapper .content-form-wrapper form button:hover {
   background-color: #2f00e9;
   border-color: #2f00e9;
+}
+
+body.page-priser {
+  --search-spacing: 2.5em;
+}
+@media (max-width: 767.98px) {
+  body.page-priser {
+    --search-spacing: 1.75em;
+  }
+}
+body.page-priser .main-section {
+  padding-top: calc(86px + 108px);
+  padding-bottom: 4em;
+}
+@media (max-width: 767.98px) {
+  body.page-priser .main-section {
+    padding-top: calc(46px + 83px);
+    padding-bottom: 2.5em;
+  }
+}
+body.page-priser .main-section .title {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  color: #020e1d;
+  font-size: 3.875rem;
+  line-height: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 991.98px) {
+  body.page-priser .main-section .title {
+    font-size: 3.15rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser .main-section .title {
+    font-size: 2.625rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser .main-section .title {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+body.page-priser .main-section .description {
+  font-family: "Lato", sans-serif;
+  color: #020e1d;
+  font-size: 1.8125rem;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 21px;
+  max-width: 805px;
+}
+@media (max-width: 991.98px) {
+  body.page-priser .main-section .description {
+    font-size: 1.64rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser .main-section .description {
+    font-size: 1.5rem;
+  }
+}
+body.page-priser section.search {
+  padding-bottom: var(--search-spacing);
+}
+body.page-priser section.search.container {
+  max-width: 800px;
+}
+body.page-priser section.search .search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body.page-priser section.search .search-input input {
+  padding: 0.85em 1em 0.85em 3em;
+  width: 100%;
+  font-size: 1.15rem;
+  color: #020e1d;
+  border: 1px solid #dfdcef;
+  border-radius: 100px;
+  outline: 0;
+}
+body.page-priser section.search .search-input input::-webkit-input-placeholder {
+  color: #020e1d;
+}
+body.page-priser section.search .search-input input:-ms-input-placeholder {
+  color: #020e1d;
+}
+body.page-priser section.search .search-input input::placeholder {
+  color: #020e1d;
+}
+body.page-priser section.search .search-input i {
+  position: absolute;
+  font-size: 1.25rem;
+  left: 1.25em;
+  color: #020e1d;
+}
+body.page-priser section.search .filter-wrapper {
+  margin-top: var(--search-spacing);
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.search .filter-wrapper {
+    width: 100%;
+  }
+}
+body.page-priser section.search .filter-wrapper button {
+  background-color: transparent;
+  font-size: 1.15rem;
+  border-radius: 100px;
+  border: 0;
+  position: relative;
+  flex-shrink: 0;
+  transition: 200ms;
+}
+body.page-priser section.search .filter-wrapper button:not(.active):hover {
+  opacity: 0.5;
+}
+body.page-priser section.search .filter-wrapper button.active {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #020e1d;
+}
+body.page-priser section.search .filter-wrapper button .count {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.65em;
+  right: -1em;
+}
+body.page-priser section.search-results {
+  padding-top: var(--search-spacing);
+  padding-bottom: 8em;
+}
+body.page-priser section.search-results.container {
+  max-width: 800px;
+}
+body.page-priser section.search-results a {
+  padding: 0.5em 1em;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-top: -0.5em;
+  margin-bottom: 1.25em;
+  display: block;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #020e1d;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 200ms;
+  border: 2px solid white;
+}
+body.page-priser section.search-results a:hover {
+  background-color: #f8f8f8;
+  border-color: #f4f4f4;
+}
+body.page-priser section.search-results .see-more-prices {
+  margin-top: 4em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.page-priser section.search-results .see-more-prices button {
+  padding: 0.75em 1.5em;
+  color: #464264;
+  background-color: white;
+  border: 1px solid #dfdcef;
+  border-radius: 100px;
+  z-index: 1;
+  transition: 200ms;
+}
+body.page-priser section.search-results .see-more-prices button:hover {
+  background-color: #464264;
+  color: white;
+}
+body.page-priser section.search-results .see-more-prices .divider {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: #dfdcef;
+}
+body.page-priser section.accordion {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+@media (max-width: 991.98px) {
+  body.page-priser section.accordion {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.accordion {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.accordion {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+body.page-priser section.accordion .description {
+  max-width: 750px;
+  margin-top: 0.5em;
+}
+body.page-priser section.accordion .description a {
+  color: #020e1d;
+}
+body.page-priser section.accordion .description a:hover {
+  color: #5600f8;
+}
+body.page-priser section.accordion #accordion {
+  margin-top: 5em;
+}
+@media (max-width: 991.98px) {
+  body.page-priser section.accordion #accordion {
+    margin-top: 4em;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.accordion #accordion {
+    margin-top: 3em;
+  }
+}
+body.page-priser section.accordion #accordion .accordion-item {
+  margin-bottom: 1em;
+  border: 0;
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-header button {
+  font-family: "Lato", sans-serif;
+  color: #020e1d;
+  font-size: 1.5rem;
+  outline: 0;
+  border-radius: 10px;
+}
+@media (max-width: 991.98px) {
+  body.page-priser section.accordion #accordion .accordion-item .accordion-header button {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.accordion #accordion .accordion-item .accordion-header button {
+    font-size: 1.15rem;
+  }
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-header button:hover {
+  background-color: rgba(170, 250, 219, 0.5882352941);
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-header button:not(.collapsed) {
+  background-color: rgba(170, 250, 219, 0.5882352941);
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-header button:not(.collapsed):after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-header button:focus {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+body.page-priser section.accordion #accordion .accordion-item .accordion-body {
+  font-family: "Lato", sans-serif;
+  color: #020e1d;
+  font-size: 1.125rem;
+  text-align: left;
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.accordion #accordion .accordion-item .accordion-body {
+    font-size: 1rem;
+  }
+}
+body.page-priser section.services {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+@media (max-width: 991.98px) {
+  body.page-priser section.services {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.services {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+body.page-priser section.services .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  padding-right: 1.25em;
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.services .links-wrapper {
+    row-gap: 1em;
+  }
+}
+body.page-priser section.services .links-wrapper a {
+  font-family: "Lato", sans-serif;
+  color: #020e1d;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  body.page-priser section.services .links-wrapper a {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body.page-priser section.services .links-wrapper a {
+    font-size: 1.15rem;
+  }
+}
+body.page-priser section.services .links-wrapper a:hover i {
+  transform: translateX(10px);
+}
+body.page-priser section.services .links-wrapper a i {
+  font-size: 0.8em;
+  transition: 200ms;
 }
 
 body {

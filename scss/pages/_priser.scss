@@ -1,0 +1,324 @@
+@use '../templates' as *;
+@use '../bootstrap' as *;
+@use '../constants' as *;
+
+body.page-priser {
+	--search-spacing: 2.5em;
+
+	@include media-breakpoint-down(md) {
+		--search-spacing: 1.75em;
+	}
+
+	// [Section 1] Main Section
+	.main-section {
+		padding-top: calc(86px + #{$nav-height});
+		padding-bottom: 4em;
+
+		@include media-breakpoint-down(md) {
+			padding-top: calc(46px + #{$nav-height-xs});
+			padding-bottom: 2.5em;
+		}
+
+		.title {
+			@include main-title;
+			@include remove-spacing;
+			@include media-breakpoint-down(md) {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+
+		.description {
+			@include main-description;
+			@include remove-spacing;
+			@include align-center;
+			margin-top: 21px;
+			max-width: 805px;
+		}
+	}
+
+	// [Section 2] Search Section
+	section.search {
+		padding-bottom: var(--search-spacing);
+
+		&.container {
+			max-width: 800px;
+		}
+
+		.search-input {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			input {
+				padding: 0.85em 1em 0.85em 3em;
+				width: 100%;
+				font-size: 1.15rem;
+				color: $color-text-description;
+				border: 1px solid $color-secondary-purple-light;
+				border-radius: 100px;
+				outline: 0;
+
+				&::-webkit-input-placeholder {
+					color: $color-text-description;
+				}
+
+				&:-ms-input-placeholder {
+					color: $color-text-description;
+				}
+
+				&::placeholder {
+					color: $color-text-description;
+				}
+			}
+
+			i {
+				position: absolute;
+				font-size: 1.25rem;
+				left: 1.25em;
+				color: $color-text-description;
+			}
+		}
+
+		.filter-wrapper {
+			margin-top: var(--search-spacing);
+			margin-left: auto;
+			margin-right: auto;
+			width: fit-content;
+			display: flex;
+			align-items: center;
+			column-gap: 2em;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
+
+			button {
+				background-color: transparent;
+				font-size: 1.15rem;
+				border-radius: 100px;
+				border: 0;
+				position: relative;
+				flex-shrink: 0;
+				transition: $transition;
+
+				&:not(.active):hover {
+					opacity: 0.5;
+				}
+
+				&.active {
+					padding: 0.5em 1em;
+					font-weight: bold;
+					background-color: white;
+					border: 1px solid $color-text-description;
+				}
+
+				.count {
+					height: 20px;
+					width: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 0.65rem;
+					color: white;
+					background-color: red;
+					border-radius: 50%;
+					position: absolute;
+					top: -0.65em;
+					right: -1em;
+				}
+			}
+		}
+	}
+
+	// [Section 3] Search Results Section
+	section.search-results {
+		padding-top: var(--search-spacing);
+		padding-bottom: 8em;
+
+		&.container {
+			max-width: 800px;
+		}
+
+		a {
+			padding: 0.5em 1em;
+			margin-left: -1em;
+			margin-right: -1em;
+			margin-top: -0.5em;
+			margin-bottom: 1.25em;
+			display: block;
+			font-size: 1.25rem;
+			text-decoration: none;
+			color: $color-text-description;
+			border-radius: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: $transition;
+			border: 2px solid white;
+
+			&:hover {
+				background-color: lighten($color-gray-light, 1.5%);
+				border-color: $color-gray-light;
+			}
+		}
+
+		.see-more-prices {
+			margin-top: 4em;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			button {
+				padding: 0.75em 1.5em;
+				color: $color-bg-purple;
+				background-color: white;
+				border: 1px solid $color-secondary-purple-light;
+				border-radius: 100px;
+				z-index: 1;
+				transition: $transition;
+
+				&:hover {
+					background-color: $color-bg-purple;
+					color: white;
+				}
+			}
+
+			.divider {
+				width: 100%;
+				position: absolute;
+				height: 2px;
+				background-color: $color-secondary-purple-light;
+			}
+		}
+	}
+
+	// [Section 4] Accordion
+	section.accordion {
+		@include section-spacing;
+
+		@include media-breakpoint-down(md) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+
+		.description {
+			max-width: 750px;
+			margin-top: 0.5em;
+
+			a {
+				color: $color-text-description;
+
+				&:hover {
+					color: $color-secondary-violet;
+				}
+			}
+		}
+
+		#accordion {
+			margin-top: 5em;
+
+			@include media-breakpoint-down(lg) {
+				margin-top: 4em;
+			}
+
+			@include media-breakpoint-down(md) {
+				margin-top: 3em;
+			}
+
+			.accordion-item {
+				margin-bottom: 1em;
+				border: 0;
+
+				.accordion-header button {
+					@include description;
+					font-size: 1.5rem;
+					outline: 0;
+					border-radius: 10px;
+
+					@include media-breakpoint-down(lg) {
+						font-size: 1.25rem;
+					}
+
+					@include media-breakpoint-down(md) {
+						font-size: 1.15rem;
+					}
+
+					&:hover {
+						background-color: #aafadb96;
+					}
+
+					&:not(.collapsed) {
+						background-color: #aafadb96;
+
+						&:after {
+							background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+						}
+					}
+
+					&:focus {
+						border: 0 !important;
+						box-shadow: none !important;
+					}
+				}
+
+				.accordion-body {
+					@include description;
+					font-size: 1.125rem;
+					text-align: left;
+
+					@include media-breakpoint-down(md) {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	// [Section 5]
+	section.services {
+		@include section-spacing;
+
+		.links-wrapper {
+			display: flex;
+			flex-direction: column;
+			row-gap: 2em;
+			padding-right: 1.25em;
+
+			@include media-breakpoint-down(md) {
+				row-gap: 1em;
+			}
+
+			a {
+				@include description;
+				font-size: 1.5rem;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include media-breakpoint-down(lg) {
+					font-size: 1.25rem;
+				}
+
+				@include media-breakpoint-down(md) {
+					font-size: 1.15rem;
+				}
+
+				&:hover {
+					i {
+						transform: translateX(10px);
+					}
+				}
+
+				i {
+					font-size: 0.8em;
+					transition: $transition;
+				}
+			}
+		}
+	}
+}

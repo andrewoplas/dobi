@@ -510,17 +510,7 @@ body.page-home {
 
 	// [Section 5] Reviews
 	section.reviews {
-		padding: 8em 1.5em;
-
-		@include media-breakpoint-down(lg) {
-			padding-top: 7em;
-			padding-bottom: 7em;
-		}
-
-		@include media-breakpoint-down(md) {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
+		@include section-spacing;
 
 		.description {
 			margin-top: 0.5em;
@@ -574,21 +564,19 @@ body.page-home {
 
 	// [Section 6] Accordion
 	section.accordion {
-		padding: 8em 1.5em;
-
-		@include media-breakpoint-down(lg) {
-			padding-top: 7em;
-			padding-bottom: 7em;
-		}
-
-		@include media-breakpoint-down(md) {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
+		@include section-spacing;
 
 		.description {
 			max-width: 750px;
 			margin-top: 0.5em;
+
+			a {
+				color: $color-text-description;
+
+				&:hover {
+					color: $color-secondary-violet;
+				}
+			}
 		}
 
 		#accordion {
@@ -618,6 +606,10 @@ body.page-home {
 
 					@include media-breakpoint-down(md) {
 						font-size: 1.15rem;
+					}
+
+					&:hover {
+						background-color: #aafadb96;
 					}
 
 					&:not(.collapsed) {
