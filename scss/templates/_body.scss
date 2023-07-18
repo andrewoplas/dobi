@@ -59,9 +59,14 @@ section.cta {
 	}
 }
 
+[aria-label='breadcrumb'] {
+	overflow-x: auto;
+}
+
 .breadcrumb {
 	padding: 2em 0;
 	font-family: $font-lt;
+	width: max-content;
 
 	--bs-breadcrumb-item-padding-x: 1em;
 	--bs-breadcrumb-divider-color: #dfdcef;

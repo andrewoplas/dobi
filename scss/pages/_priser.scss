@@ -89,7 +89,7 @@ body.page-priser {
 			width: fit-content;
 			display: flex;
 			align-items: center;
-			column-gap: 2em;
+			column-gap: 1em;
 			flex-wrap: nowrap;
 			overflow-x: auto;
 
@@ -105,31 +105,21 @@ body.page-priser {
 				position: relative;
 				flex-shrink: 0;
 				transition: $transition;
-
-				&:not(.active):hover {
-					opacity: 0.5;
-				}
-
-				&.active {
-					padding: 0.5em 1em;
-					font-weight: bold;
-					background-color: white;
-					border: 1px solid $color-text-description;
-				}
+				padding: 0.5em 1em;
 
 				.count {
-					height: 20px;
-					width: 20px;
+					height: 18px;
+					width: 18px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					font-size: 0.65rem;
+					font-size: 0.5rem;
 					color: white;
 					background-color: red;
 					border-radius: 50%;
 					position: absolute;
-					top: -0.65em;
-					right: -1em;
+					top:15%;
+					right: 3%;
 				}
 			}
 		}
@@ -144,26 +134,31 @@ body.page-priser {
 			max-width: 800px;
 		}
 
-		a {
-			padding: 0.5em 1em;
-			margin-left: -1em;
-			margin-right: -1em;
-			margin-top: -0.5em;
-			margin-bottom: 1.25em;
-			display: block;
-			font-size: 1.25rem;
-			text-decoration: none;
-			color: $color-secondary-blue-dark;
-			border-radius: 100px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			transition: $transition;
-			border: 2px solid white;
+		.search-results-list {
+			transition: 300ms;
+			overflow-y: hidden;
+			position: relative;
+			max-height: 100vh;
 
-			&:hover {
-				background-color: lighten($color-gray-light, 1.5%);
-				border-color: $color-gray-light;
+			a {
+				padding: 0.5em 1em;
+				margin-top: -0.5em;
+				margin-bottom: 1.25em;
+				display: block;
+				font-size: 1.25rem;
+				text-decoration: none;
+				color: $color-secondary-blue-dark;
+				border-radius: 100px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				transition: $transition;
+				border: 2px solid white;
+
+				&:hover {
+					background-color: lighten($color-gray-light, 1.5%);
+					border-color: $color-gray-light;
+				}
 			}
 		}
 
@@ -325,6 +320,41 @@ body.page-priser {
 					transition: $transition;
 				}
 			}
+		}
+	}
+}
+
+.filter-wrapper {
+	position: relative;
+
+	.animation {
+		position: absolute;
+		height: 100%;
+		border-radius: 100px;
+		border: 1px solid $color-text-description;
+		background-color: white;
+		top: 0;
+		z-index: 0;
+		transition: all 300ms ease 0s;
+	}
+
+	button {
+		z-index: 1;
+
+		&:nth-child(1) {
+			width: 160px;
+		}
+		&:nth-child(2) {
+			width: 140px;
+		}
+		&:nth-child(3) {
+			width: 110px;
+		}
+		&:nth-child(4) {
+			width: 160px;
+		}
+		&:nth-child(5) {
+			width: 125px;
 		}
 	}
 }
