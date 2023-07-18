@@ -35,7 +35,10 @@ section.cta {
 	}
 
 	a {
-		@include button($background-color: $color-secondary-blue-dark, $border-color: $color-secondary-blue-dark);
+		@include button(
+			$background-color: $color-secondary-blue-dark,
+			$border-color: $color-secondary-blue-dark
+		);
 		margin-top: 2.5rem;
 
 		@include media-breakpoint-down(md) {
@@ -61,18 +64,13 @@ section.cta {
 	font-family: $font-lt;
 
 	--bs-breadcrumb-item-padding-x: 1em;
-	--bs-breadcrumb-divider-color: white;
-	--bs-breadcrumb-item-active-color: white;
+	--bs-breadcrumb-divider-color: #dfdcef;
+	--bs-breadcrumb-item-active-color: #dfdcef;
 
 	li {
 		a {
-			color: white !important;
-			opacity: 0.7;
+			color: #dfdcef !important;
 			transition: $transition;
-
-			&:hover {
-				opacity: 1;
-			}
 		}
 	}
 }

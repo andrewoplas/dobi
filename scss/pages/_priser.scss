@@ -26,6 +26,8 @@ body.page-priser {
 				padding-left: 25px;
 				padding-right: 25px;
 			}
+
+			color: $color-secondary-blue-dark-2;
 		}
 
 		.description {
@@ -151,7 +153,7 @@ body.page-priser {
 			display: block;
 			font-size: 1.25rem;
 			text-decoration: none;
-			color: $color-text-description;
+			color: $color-secondary-blue-dark;
 			border-radius: 100px;
 			display: flex;
 			align-items: center;
@@ -278,9 +280,13 @@ body.page-priser {
 		}
 	}
 
-	// [Section 5]
+	// [Section 5] Services
 	section.services {
 		@include section-spacing;
+
+		.description {
+			color: $color-secondary-blue-dark;
+		}
 
 		.links-wrapper {
 			display: flex;

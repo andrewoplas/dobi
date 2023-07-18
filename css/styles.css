@@ -344,16 +344,12 @@ section.cta .icon-wrapper {
   padding: 2em 0;
   font-family: "Lato", sans-serif;
   --bs-breadcrumb-item-padding-x: 1em;
-  --bs-breadcrumb-divider-color: white;
-  --bs-breadcrumb-item-active-color: white;
+  --bs-breadcrumb-divider-color: #dfdcef;
+  --bs-breadcrumb-item-active-color: #dfdcef;
 }
 .breadcrumb li a {
-  color: white !important;
-  opacity: 0.7;
+  color: #dfdcef !important;
   transition: 200ms;
-}
-.breadcrumb li a:hover {
-  opacity: 1;
 }
 
 footer {
@@ -1173,6 +1169,7 @@ body.page-hvorfor-dobi .main-section .title {
   line-height: 1.1em;
   margin: 0;
   padding: 0;
+  color: #001632;
 }
 @media (max-width: 991.98px) {
   body.page-hvorfor-dobi .main-section .title {
@@ -1461,6 +1458,7 @@ body.page-erhverv .main-section .content-wrapper .title {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.4em;
+  color: #0e0934;
 }
 @media (max-width: 991.98px) {
   body.page-erhverv .main-section .content-wrapper .title {
@@ -1592,6 +1590,9 @@ body.page-erhverv section.services .content-wrapper .item--first-child {
   padding-left: 0;
   border: 0;
 }
+body.page-erhverv section.services .content-wrapper .item--first-child .title {
+  font-family: "Lato", sans-serif;
+}
 body.page-erhverv section.services .content-wrapper .item--first-child .tags-container {
   display: flex;
   gap: 0.35em;
@@ -1612,24 +1613,24 @@ body.page-erhverv section.services .content-wrapper .item--first-child .tags-con
   opacity: 0.8;
 }
 body.page-erhverv section.services .content-wrapper .item img {
-  height: 100px;
-  width: 100px;
-  background-color: black;
+  height: 85px;
+  width: fit-content;
 }
 @media (max-width: 767.98px) {
   body.page-erhverv section.services .content-wrapper .item img {
-    height: 80px;
-    width: 80px;
+    height: 65px;
   }
 }
 body.page-erhverv section.services .content-wrapper .item .subtitle {
   font-weight: bold;
   text-transform: uppercase;
+  color: #0e0934;
 }
 body.page-erhverv section.services .content-wrapper .item .description {
   font-size: 1em !important;
   font-weight: 400 !important;
   flex: 1;
+  color: #0e0934;
 }
 body.page-erhverv section.services .content-wrapper .item a.button {
   font-family: "Lato", sans-serif;
@@ -1645,6 +1646,7 @@ body.page-erhverv section.services .content-wrapper .item a.button {
   column-gap: 0.75em;
   font-size: 1rem;
   line-height: 100%;
+  color: #020e1d;
 }
 @media (max-width: 767.98px) {
   body.page-erhverv section.services .content-wrapper .item a.button {
@@ -1679,6 +1681,11 @@ body.page-erhverv section.contact {
 body.page-erhverv section.contact .title {
   color: white;
 }
+@media (min-width: 992px) {
+  body.page-erhverv section.contact .title {
+    font-size: 3.875rem;
+  }
+}
 body.page-erhverv section.contact .content-wrapper {
   margin-top: 4em;
   display: grid;
@@ -1699,11 +1706,10 @@ body.page-erhverv section.contact .content-wrapper {
 }
 body.page-erhverv section.contact .content-wrapper .content-text-wrapper p {
   color: white;
-  font-size: 1.25rem;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 992px) {
   body.page-erhverv section.contact .content-wrapper .content-text-wrapper p {
-    font-size: 1rem;
+    font-size: 1.875rem;
   }
 }
 body.page-erhverv section.contact .content-wrapper .content-form-wrapper {
@@ -1719,12 +1725,17 @@ body.page-erhverv section.contact .content-wrapper .content-form-wrapper {
 body.page-erhverv section.contact .content-wrapper .content-form-wrapper .title {
   color: #0e0934;
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.625rem;
+}
+@media (max-width: 767.98px) {
+  body.page-erhverv section.contact .content-wrapper .content-form-wrapper .title {
+    font-size: 1.5rem;
+  }
 }
 body.page-erhverv section.contact .content-wrapper .content-form-wrapper .description {
   margin-top: 0.25em;
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
 }
 @media (max-width: 767.98px) {
   body.page-erhverv section.contact .content-wrapper .content-form-wrapper .description {
@@ -1808,6 +1819,7 @@ body.page-priser .main-section .title {
   line-height: 1.1em;
   margin: 0;
   padding: 0;
+  color: #001632;
 }
 @media (max-width: 991.98px) {
   body.page-priser .main-section .title {
@@ -1947,7 +1959,7 @@ body.page-priser section.search-results a {
   display: block;
   font-size: 1.25rem;
   text-decoration: none;
-  color: #020e1d;
+  color: #0e0934;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -2090,6 +2102,9 @@ body.page-priser section.services {
     padding-top: 5em;
     padding-bottom: 5em;
   }
+}
+body.page-priser section.services .description {
+  color: #0e0934;
 }
 body.page-priser section.services .links-wrapper {
   display: flex;
