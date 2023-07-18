@@ -1321,7 +1321,8 @@ body.page-hvorfor-dobi .why-jetclean .item a.button:hover {
   column-gap: 1em;
 }
 body.page-hvorfor-dobi .why-jetclean .item a.button i {
-  font-size: 0.9em;
+  margin-top: 2px;
+  font-size: 0.8em;
 }
 body.page-hvorfor-dobi .why-jetclean .item .spacing-right {
   margin-right: 75px;
@@ -1660,7 +1661,8 @@ body.page-erhverv section.services .content-wrapper .item a.button:hover {
   column-gap: 1em;
 }
 body.page-erhverv section.services .content-wrapper .item a.button i {
-  font-size: 0.9em;
+  margin-top: 2px;
+  font-size: 0.8em;
 }
 body.page-erhverv section.contact {
   padding-top: 8em;
