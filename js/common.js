@@ -45,19 +45,20 @@ $(function () {
 
 	// Filter prices hover animation
 	const animation = $('.filter-wrapper .animation');
+	function moveTo(element) {
+		const width = element.outerWidth();
+		const left = element.position().left;
+		animation.css('width', width + 'px');
+		animation.css('left', left + 'px');
+	}
+
+	moveTo($('.filter-wrapper button.active'));
 	$('.filter-wrapper button').hover(
 		function () {
-			const width = $(this).outerWidth();
-			const left = $(this).position().left;
-			animation.css('width', width + 'px');
-			animation.css('left', left + 'px');
+			moveTo($(this));
 		},
 		function () {
-			const activeElement = $('.filter-wrapper button.active');
-			const width = activeElement.outerWidth();
-			const left = activeElement.position().left;
-			animation.css('width', width + 'px');
-			animation.css('left', left + 'px');
+			moveTo($('.filter-wrapper button.active'));
 		},
 	);
 });
